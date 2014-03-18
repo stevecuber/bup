@@ -1,0 +1,10 @@
+Network error while fetching
+https://rubygems.org/quick/Marshal.4.8/1234567890_-1.1.gemspec.rz
+
+Bundler could not find compatible versions for gem "rails":
+  In Gemfile:
+    browsercms (= 3.5.7) ruby depends on
+      rails (< 3.3.0, >= 3.2.5) ruby
+
+    rails (4.0.1)
+

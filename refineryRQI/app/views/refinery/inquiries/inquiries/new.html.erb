@@ -1,0 +1,44 @@
+<div style="margin-left:200px;">
+<% content_for :body do %>
+  <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
+</div>
+  <div class='inquiries'>
+    <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
+      <%= render :partial => "/refinery/admin/error_messages",
+                 :locals => {
+                   :object => @inquiry,
+                   :include_object_name => true
+                 } %>
+	<table>
+	  <tr>
+	    <td> <%= f.required_label :name, :class => 'placeholder-fallback' %> </td>
+	    <td> <%= f.text_field :name, :class => 'text form-control', :required => 'required', :placeholder => t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %> </td>
+	  </tr>
+	  <tr>
+	    <td> <%= f.required_label :email, :class => 'placeholder-fallback' %> </td>
+	    <td> <%= f.email_field :email, :class => 'text email form-control', :required => 'required', :placeholder => t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %> </td>
+	  </tr>
+	  <tr>
+      <% if Refinery::Inquiries.show_phone_number_field %>
+	    <td>
+          <%= f.label :phone, :class => 'placeholder-fallback' %>
+	    </td>
+	    <td>
+          <%= f.text_field :phone, :class => 'text phone form-control', :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+	    </td>
+      <% end %>
+	  </tr>
+	  <tr>
+	    <td> <%= f.required_label :message, :class => 'placeholder-fallback' %> </td>
+	    <td> <%= f.text_area :message, :class => 'form-control', :rows => 8, :required => 'required', :placeholder => t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %> </td>
+	  </tr>
+	  <tr>
+	    <td> <%= f.submit t('.send'), :class => 'btn btn-primary' %> </td>
+	    <!--td> <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %> </td-->
+	  </tr>
+	</table>
+    <% end %>
+  </div>
+<% end %>
+<%= render "/refinery/content_page" %>
+

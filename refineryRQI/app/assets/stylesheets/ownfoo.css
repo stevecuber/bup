@@ -1,0 +1,237 @@
+/* Custom style */
+
+.salita {
+	margin-left: 1px;
+	margin-right: 2px;
+}
+
+a.noline {
+	text-decoration:none;
+}
+
+.babakonti {
+	padding-top:1%;
+}
+
+.kaliwakonti {
+	
+}
+
+.wagbaba {
+	margin-bottom:0px;
+}
+
+.navleftkonti {
+	margin-left:10%;
+}
+
+.bakbody {
+	/*background-color:#E0E0E0;*/
+	background-color:#FFFFFF;
+	border-radius:7px;
+	box-shadow: 4px 4px 5px #888888;
+	padding:10px;
+	margin-bottom:8px;
+	/*border-top-right-radius: 0;
+	border-bottom-right-radius: 0;*/
+}
+.bakbodys {
+	background-color:#E0E0E0;
+	border-radius:7px;
+	box-shadow: 4px 4px 5px #888888;
+        /*border-bottom-left-radius: 0;
+	border-top-left-radius: 0;*/
+}
+
+.dilaw {
+	background-color:#FFCC00;
+	color:#000000;
+}
+
+.ownresp {
+	height: auto;
+	max-width: 80%;
+}
+
+.ownrespios {
+	height: auto;
+	width: 100%;
+}
+
+.ownrespand {
+	height: auto;
+	width: 90%;
+}
+
+.ownfoo {
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	color:#ffffff;
+	text-align:center;
+}
+
+.forgotpop {
+	display: none;
+	position:absolute;
+	padding:10px;
+	text-align:center;
+	background-color:#E0E0E0;
+	border-radius:3px;
+	z-index:100;
+}
+
+.kontingspace {
+	margin-top:5px;
+}
+
+.forgotpad {
+	padding-right:12.9%;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: auto;
+  background-color: #000000;
+  margin-bottom:0px;
+  padding-top: 10px;
+}
+
+#footer-bottom {
+  background: #1a1a1a;
+  background-image: -webkit-linear-gradient(top, #262626 0%, #1a1a1a 100%);
+  border-top: 1px solid #353535;
+  clear: both;
+  overflow: hidden;
+  text-align: right;
+  padding: 5px 20px;
+  font-size: 13px;
+  margin-top: 15px;
+  color: #FFFFFF;
+}
+
+#footer-bottom a {
+  color: red;
+  text-decoration: none;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .container {
+  /*padding: 60px 15px 0;*/
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.hbgw {
+	background-image: url(hbgw.png);
+	background-size: 100% 100%;
+	padding-top: 40px;
+	margin: 0 auto;
+}
+
+.ownclear {
+	clear: both;
+}
+
+.ownfleft {
+	float: left;
+}
+
+.ownfright {
+	float: right;
+}
+
+.ownjust {
+	text-align:justify;
+}
+
+.ownsidesize {
+	font-size: 12px;
+}
+
+.fadein {
+	    position:relative;
+	    height:10px;
+	    width:50%;
+	    float: left;
+}
+
+.fadein img {
+	    position:absolute;
+	    left:0;
+	    top:0;
+}
+
+.fadein2 {
+	    position:relative;
+	    height:10px;
+	    width:50%;
+	    float: right;
+}
+
+.fadein2 img {
+	    position:absolute;
+	    left:0;
+	    top:0;
+}
+
+.fadeinAndroid {
+	    position:relative;
+	    height:532px;
+	    width:50%;
+	    float: left;
+}
+
+.fadeinAndroid img {
+	    position:absolute;
+	    left:0;
+	    top:0;
+	    margin-left:5%;
+}
+
+.fadeinAndroid2 {
+	    position:relative;
+	    height:532px;
+	    width:50%;
+	    float: right;
+}
+
+.fadeinAndroid2 img {
+	    position:absolute;
+	    left:0;
+	    top:0;
+	    margin-left:5%;
+}

@@ -1,0 +1,18 @@
+<%= t('.greeting') %>,<br/>
+<br/>
+<%= t('.you_recieved_new_career') %><br/>
+<br/>
+<%= t('.career_starts') %><br/>
+<br/>
+<%= t('.name', :default => t('activerecord.attributes.career.name')) %>: <%= @career.name %><br/>
+<%= t('.position', :default => t('activerecord.attributes.career.position')) %>: <%= @career.position %><br/>
+<%= t('.message', :default => t('activerecord.attributes.career.message')) %>: 
+<%= @career.message %>
+<%= t('.cv', :default => t('activerecord.attributes.career.cv')) %>: <%= @career.cv %><br/>
+<br/>
+<%= t('.career_ends') %><br/>
+<br/>
+<%= t('.closing_line') %>,<br/>
+<%= Refinery::Core.site_name %><br/>
+<br/>
+<%= t('.ps_html') %>

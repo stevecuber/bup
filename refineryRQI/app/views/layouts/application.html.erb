@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <head>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%= render '/refinery/head' %>
+    <%= render '/refinery/javascripts' %>
+  </head>
+  <body>
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <!--div id="page_container"-->
+      <!--header id="header"-->
+        <%= render '/refinery/header' -%>
+      <!--/header-->
+      <!--section id="page"-->
+
+    <!-- Wrap all page content here -->
+    <!--div id="wrap"-->
+      <!-- Begin page content -->
+      <div class="container">
+	<div class="row">
+	  <%= yield %>
+	</div>
+      </div> <!-- end of container -->
+    </div> <!-- end of wrap -->
+
+<!-- Sticky footer add -->
+
+    <!--div id="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </div-->
+
+<!-- End of sticky footer add -->
+
+      <!--/section-->
+      <!--footer-->
+        <%= render '/refinery/footer' %>
+      <!--/footer-->
+    <!--/div--> <!-- end of page-container -->
+    <!--%= render '/refinery/javascripts' %-->
+  </body>
+</html>

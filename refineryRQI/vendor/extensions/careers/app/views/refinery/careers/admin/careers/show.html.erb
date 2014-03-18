@@ -1,0 +1,83 @@
+<div id='records'>
+  <h2><%= t('.career') %></h2>
+  <table id='career' class='inquiry'>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.name', :default => t('activerecord.attributes.career.name')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @career.name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.email', :default => t('activerecord.attributes.career.email')) %>
+          </strong>
+        </td>
+        <td>
+          <!--%= @career.email %-->
+          [<%= mail_to @career.email, @career.email, {:title => t('.click_to_email')} %>]
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.position', :default => t('activerecord.attributes.career.position')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @career.position %>
+        </td>
+      </tr>
+      <tr>
+        <td valign='top'>
+          <strong>
+            <%= t('.message', :default => t('activerecord.attributes.career.message')) %>
+          </strong>
+        </td>
+        <td>
+          <p style='margin-top: 0px'>
+            <% @career.message.to_s.gsub("\r\n\r\n", "\r\n").split("\r\n").each_with_index do |sentence, index| %>
+              <%=raw "</p><p>" unless index == 0 %>
+              <%= sentence %>
+            <% end %>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.cv', :default => t('activerecord.attributes.career.cv')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @career.cv %>
+	  <%= link_to "View Resume", @career.cv_link %>
+        </td>
+      </tr>
+  </table>
+</div>
+<div id='actions'>
+  <h2><%= t('.details')%></h2>
+  <p>
+    <strong><%= t('.age') %>:</strong> <%= time_ago_in_words(@career.created_at) %>
+  </p>
+  <h2><%= t('.actions') %></h2>
+  <ul>
+    <li>
+      <%= link_to t('.back_to_all_careers'), refinery.url_for(:action => 'index'),
+                   :class => "back_icon" %>
+    </li>
+    <li>
+      <%= link_to t('delete', :scope => 'refinery.careers.admin.careers'),
+                  refinery.careers_admin_career_path(@career),
+                  :class => 'delete_icon no-tooltip confirm-delete',
+                  :title => t('delete', :scope => 'refinery.careers.admin.careers'),
+                  :'data-confirm' => t('message', :scope => 'refinery.admin.delete', :title => @career.name),
+                  :'data-method' => "delete" %>
+    </li>
+  </ul>
+</div>

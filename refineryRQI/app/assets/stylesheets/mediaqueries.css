@@ -1,0 +1,32 @@
+/* Mobile HD */
+@media screen and (min-width: 350px) and (max-width: 760px) {
+	
+.fadein {
+	    position:relative;
+	    height:100px;
+	    width:50%;
+	    float: left;
+}
+
+.fadein2 {
+	    position:relative;
+	    height:100px;
+	    width:50%;
+	    float: right;
+}
+
+.fadeinAndroid {
+	    position:relative;
+	    height:100px;
+	    width:50%;
+	    float: left;
+}
+
+.fadeinAndroid2 {
+	    position:relative;
+	    height:100px;
+	    width:50%;
+	    float: right;
+}
+
+}

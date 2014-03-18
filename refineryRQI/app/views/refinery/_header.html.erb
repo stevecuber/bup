@@ -1,0 +1,21 @@
+<!--div class="hbgw"-->
+<div class="hbgw">
+  <!--h1 id='logo'-->
+    <!--%= link_to Refinery::Core.site_name, refinery.root_path %-->
+    <a href="/"><%= image_tag "logo.png", :class => "ownresp" %></a>
+  <!--/h1-->
+</div>
+<!--%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %-->
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <%= navigation_menu.to_html %> <!--/.nav-collapse -->
+      </div>
+    </div>

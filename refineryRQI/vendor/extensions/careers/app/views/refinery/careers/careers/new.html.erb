@@ -1,0 +1,41 @@
+<div style="margin-left:200px;">
+<% content_for :body do %>
+  <div class='careers'>
+    <%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) %>
+
+    <%= form_for [refinery, :careers, @career] do |f| %>
+      <%= render '/refinery/admin/error_messages',
+                 :object => @career,
+                 :include_object_name => true  %>
+
+	<table>
+	  <tr>
+	    <td> <%= f.required_label :name %> </td>
+        <td> <%= f.text_field :name, :class => 'text form-control', :required => 'required' %> </td>
+      </tr>
+      <tr>
+	    <td> <%= f.required_label :email %> </td>
+        <td> <%= f.email_field :email, :class => 'text form-control', :required => 'required' %> </td>
+      </tr>
+	  <tr>
+        <td> <%= f.label :position %> </td>
+        <td> <%= f.text_field :position, :class => 'text form-control' %> </td>
+	  </tr>
+      <tr>
+        <td> <%= f.label :message %> </td>
+        <td> <%= f.text_area :message, :rows => 5, :class => 'text form-control' %> </td>
+      </tr>
+	  <tr>
+        <td> <%= f.label :cv %> </td>
+      	<td> <span class="btn btn-file"> <%= f.file_field :cv_id, :required => 'required' %> </span> </td>
+	  </tr>
+	  <tr>
+	  	<td> <%= f.submit t('.send'), :class => 'btn btn-primary' %> </td>
+        <td></td>
+      </tr>
+	</table>
+    <% end %>
+  </div>
+<% end %>
+<%= render '/refinery/content_page' %>
+</div>
